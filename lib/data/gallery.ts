@@ -3,10 +3,8 @@ export type GalleryImage = {
   alt: string
 }
 
-// Must match images.remotePatterns in next.config.ts.
-export const UNSPLASH_QUERY = "?auto=format&fit=crop&w=800&q=80"
-
-export const unsplash = (id: string) => `https://images.unsplash.com/photo-${id}${UNSPLASH_QUERY}`
+// Width, quality and format are added per request by lib/images/unsplash-loader.ts.
+export const unsplash = (id: string) => `https://images.unsplash.com/photo-${id}`
 
 export const dishGallery: GalleryImage[] = [
   { src: unsplash("1482049016688-2d3e1b311543"), alt: "Soft-boiled eggs and avocado on a dark plate" },

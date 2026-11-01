@@ -5,14 +5,8 @@ const nextConfig: NextConfig = {
   cacheComponents: true,
   partialPrefetching: true,
   images: {
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "images.unsplash.com",
-        pathname: "/photo-*",
-        search: "?auto=format&fit=crop&w=800&q=80",
-      },
-    ],
+    loader: "custom",
+    loaderFile: "./lib/images/unsplash-loader.ts",
   },
   turbopack: {
     rules: {

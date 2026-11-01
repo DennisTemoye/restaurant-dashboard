@@ -81,10 +81,17 @@ export function Hero() {
           "motion-safe:duration-1000 [animation-delay:320ms]"
         )}
       >
-        <div className="relative aspect-[4/5] w-[30%] translate-y-6 -rotate-[5deg] overflow-hidden rounded-[1.25rem] sm:rounded-[2rem]">
-          <Image src={heroImages.left.src} alt={heroImages.left.alt} fill sizes="30vw" className="object-cover" />
+        <div className="relative aspect-[4/5] w-[30%] translate-y-6 -rotate-[5deg] overflow-hidden rounded-[1.25rem] bg-ink/5 sm:rounded-[2rem]">
+          <Image
+            src={heroImages.left.src}
+            alt={heroImages.left.alt}
+            fill
+            loading="eager"
+            sizes="(min-width: 1152px) 330px, 30vw"
+            className="object-cover"
+          />
         </div>
-        <div className="relative aspect-[4/5] w-[44%] overflow-hidden rounded-[1.5rem] sm:rounded-[2.5rem]">
+        <div className="relative aspect-[4/5] w-[44%] overflow-hidden rounded-[1.5rem] bg-ink/5 sm:rounded-[2.5rem]">
           <Image
             src={heroImages.main.src}
             alt={heroImages.main.alt}
@@ -94,8 +101,15 @@ export function Hero() {
             className="object-cover"
           />
         </div>
-        <div className="relative aspect-[4/5] w-[30%] translate-y-6 rotate-[5deg] overflow-hidden rounded-[1.25rem] sm:rounded-[2rem]">
-          <Image src={heroImages.right.src} alt={heroImages.right.alt} fill sizes="30vw" className="object-cover" />
+        <div className="relative aspect-[4/5] w-[30%] translate-y-6 rotate-[5deg] overflow-hidden rounded-[1.25rem] bg-ink/5 sm:rounded-[2rem]">
+          <Image
+            src={heroImages.right.src}
+            alt={heroImages.right.alt}
+            fill
+            loading="eager"
+            sizes="(min-width: 1152px) 330px, 30vw"
+            className="object-cover"
+          />
         </div>
       </div>
     </section>
